@@ -5,7 +5,7 @@ export default function ProfileInfo({ styles }) {
   return (
     <View style={styles.profileContainer}>
       <Image
-        source={require('./assets/profile.jpg')} // Placeholder for avatar
+        source={require('../assets/profile.jpg')} 
         style={styles.avatar}
       />
       <Text style={styles.username}>Arabiela Cubillas</Text>
