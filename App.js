@@ -1,15 +1,24 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import Profile from './pages/Profile'; // Importing ProfileScreen from the pages folder
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import ForgotPass from './components/ForgotPass';
+import Profile from './pages/Profile';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Profile />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="LogIn" component={Login} />
+        <Stack.Screen name="SignUp" component={Signup} />
+        <Stack.Screen name="ForgotPass" component={ForgotPass} />
+        <Stack.Screen name="Profile" component={Profile} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-
 };
 
 export default App;
-

@@ -1,4 +1,3 @@
-// PreferencesSection.js
 import React from 'react';
 import { View, Text, Switch, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';

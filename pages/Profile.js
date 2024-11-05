@@ -1,4 +1,4 @@
-// Profile.js
+
 import React, { useState } from 'react';
 import { StatusBar, StyleSheet, ScrollView, View } from 'react-native';
 import LogoutHeader from '../components/LogoutHeader';
@@ -12,7 +12,7 @@ export default function Profile() {
   const [isWiFiOnly, setIsWiFiOnly] = useState(false);
   const [isAutoplay, setIsAutoplay] = useState(false);
 
-  // Toggle functions for each switch
+  
   const toggleDarkMode = () => setIsDarkMode((prevState) => !prevState);
   const toggleBackgroundPlay = () => setIsBackgroundPlay((prevState) => !prevState);
   const toggleWiFiOnly = () => setIsWiFiOnly((prevState) => !prevState);
@@ -43,12 +43,12 @@ export default function Profile() {
   );
 }
 
-// Function to create dynamic styles based on the current theme
+
 const createStyles = (isDarkMode) => {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: isDarkMode ? '#121212' : '#E3F9FD',
+      backgroundColor: isDarkMode ? '#121212' : '#fff',
       paddingTop: 50,
     },
     scrollContainer: {
